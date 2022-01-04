@@ -120,7 +120,7 @@ $rules = [
     'magic_method_casing'                           => true,
     'method_chaining_indentation'                   => true,
     'multiline_comment_opening_closing'             => true,
-    'multiline_whitespace_before_semicolons'        => ['strategy' => 'new_line_for_chained_calls'],
+    'multiline_whitespace_before_semicolons'        => ['strategy' => 'no_multi_line'],
     'native_function_casing'                        => true,
     'native_function_type_declaration_casing'       => true,
     'no_alias_language_construct_call'              => true,
