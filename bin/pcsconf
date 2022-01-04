@@ -1,14 +1,11 @@
 #!/usr/bin/env zsh
 
-$COMPOSERHOMEDIR=`composer -n config --global home`
-$PCSCONFIG=$COMPOSERHOMEDIR/vendor/jascha030/php-cs-fixer-config
+COMPOSERHOMEDIR=$(composer -n config --global home)
+PSCONFIG=$COMPOSERHOMEDIR/vendor/jascha030/php-cs-config
 
-if [[ -f $PSCONFIG ]]
-  $PSCONFIGFILE=$PSCONFIG/.php-cs-fixer.dist.php
-else
-  $PSCONFIGFILE=$PWD/vendor/jascha030/php-cs-fixer-config/.php-cs-fixer.dist.php
+if [[ -d $PSCONFIG ]]
+then
+  cp "$PSCONFIG/.php-cs-fixer.dist.php" "$PWD/.php-cs-fixer.dist.php"
 fi
-
-cp $PSCONFIG $PWD/.php-cs-fixer.dist.php
 
 exit 0;
