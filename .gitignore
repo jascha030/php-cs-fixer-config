@@ -1,0 +1,10 @@
+# JetBrains
+/.idea/
+
+# Composer
+/vendor/
+
+# Other
+**cache
+.DS_Store
+
