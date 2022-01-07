@@ -80,7 +80,13 @@ $rules = [
     'align_multiline_comment'                       => true,
     'array_indentation'                             => true,
     'backtick_to_shell_exec'                        => true,
-    'binary_operator_spaces'                        => true,
+    'binary_operator_spaces'                        => [
+        'default'   => 'single_space',
+        'operators' => [
+            '='  => 'align_single_space_minimal',
+            '=>' => 'align_single_space_minimal'
+        ]
+    ],
     'blank_line_before_statement'                   => [
         'statements' => [
             'break',
