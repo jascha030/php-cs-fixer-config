@@ -1,0 +1,17 @@
+### php-cs-fixer-config gitignore
+
+## IDE Projectfiles
+/.idea/
+/.vscode/
+
+/.phpactor.json
+
+## Vendor
+vendor/
+/tools/
+!/tools/phive
+
+## Other
+*.DS_Store
+**.cache
+
