@@ -1,0 +1,40 @@
+{
+    "name": "socialbrothers/php-cs-fixer-config",
+    "description": "WP Backend default configuration for php-cs-fixer.",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "Socialbrothers\\PhpCsFixer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Socialbrothers\\PhpCsFixer\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jascha van Aalst",
+            "email": "jascha@socialbrothers.nl"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.4 || ^8.0 || ^8.1 || ^8.2 || ^8.3"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "ergebnis/composer-normalize": "^2.42"
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        }
+    },
+    "extra": {
+        "composer-normalize": {
+            "indent-size": "4",
+            "indent-style": "space"
+        }
+    }
+}
