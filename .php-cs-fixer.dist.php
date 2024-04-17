@@ -23,7 +23,7 @@ return (new Config(
     <<<'EOF'
         This file is part of the WP Brothers WordPress Back-end PHP-CS-Fixer Config package.
 
-        (c) WP Brothers <=wordpress@socialbrothers.nl>
+        (c) WP Brothers <wordpress@socialbrothers.nl>
 
         For the full copyright and license information, please view the LICENSE
         file that was distributed with this source code.
