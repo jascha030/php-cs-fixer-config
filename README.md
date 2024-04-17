@@ -10,15 +10,16 @@ composer require --dev socialbrothers/wpbe-php-cs-fixer
 
 ## Usage
 
-The `SocialBrothers/PhpCsFixer/Config` class extends `PhpCsFixer\Config` class and automatically sets our default
-php-cs-fixer ruleset.
+The `SocialBrothers/PhpCsFixer/Config` class extends `PhpCsFixer\Config` class
+and automatically sets our default php-cs-fixer ruleset.
 It allows you to set the language version and header comment in a more readable way.
 
 This means any other method from the `PhpCsFixer\Config` class can be used as well.
 
 ### Language Version
 
-The `SocialBrothers/PhpCsFixer/Enum/LanguageVersion` class contains constants for the available PHP language versions.
+The `SocialBrothers/PhpCsFixer/Config` class contains constants for the available
+PHP language versions.
 
 ```php
     public const SUPPORTED_VERSIONS = [
