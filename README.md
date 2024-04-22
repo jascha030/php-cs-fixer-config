@@ -1,11 +1,11 @@
-# WordPress Back-end Php-cs-fixer Config
+# WordPress Php-cs-fixer Config
 
-WP Back-end default configuration for php-cs-fixer.
+WP Back-end default configurations for php-cs-fixer.
 
 ## Installation
 
 ```bash
-composer require --dev socialbrothers/wpbe-php-cs-fixer
+composer require --dev socialbrothers/php-cs-fixer-config
 ```
 
 ## Usage
