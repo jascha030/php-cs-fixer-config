@@ -1,17 +1,32 @@
 <?php
 
+/*
+ * This file is part of the WP Brothers WordPress Back-end PHP-CS-Fixer Config package.
+ *
+ * (c) WP Brothers <wordpress@socialbrothers.nl>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 declare(strict_types=1);
 
 namespace SocialBrothers\PhpCsFixer;
 
 use PhpCsFixer\Config as BaseConfig;
 
+use const ARRAY_FILTER_USE_BOTH;
+
 class Config extends BaseConfig
 {
     public const PHP_74 = 70400;
+
     public const PHP_80 = 80000;
+
     public const PHP_81 = 80100;
+
     public const PHP_82 = 80200;
+
     public const PHP_83 = 80300;
 
     public const SUPPORTED_VERSIONS = [
@@ -21,32 +36,33 @@ class Config extends BaseConfig
         self::PHP_82,
         self::PHP_83,
     ];
+
     /**
      * The default ruleset.
      *
      * @var array<string,mixed>
      */
     private const BASE_RULES = [
-        '@PHP70Migration' => true,
+        '@PHP70Migration'       => true,
         '@PHP70Migration:risky' => true,
-        '@PHP73Migration' => true,
+        '@PHP73Migration'       => true,
 
-        '@PHP74Migration' => true,
+        '@PHP74Migration'       => true,
         '@PHP74Migration:risky' => true,
 
-        '@PER'                                             => true,
-        '@PER:risky'                                       => true,
+        '@PER'       => true,
+        '@PER:risky' => true,
 
-        '@PSR1'                                            => true,
-        '@PSR12'                                           => true,
-        '@PSR12:risky'                                     => true,
+        '@PSR1'        => true,
+        '@PSR12'       => true,
+        '@PSR12:risky' => true,
 
-        '@Symfony'                                         => true,
-        '@Symfony:risky'                                   => true,
+        '@Symfony'       => true,
+        '@Symfony:risky' => true,
 
         'declare_strict_types'                             => true,
-        'no_php4_constructor' => true,
-        'single_line_empty_body' => false,
+        'no_php4_constructor'                              => true,
+        'single_line_empty_body'                           => false,
         'blank_line_after_opening_tag'                     => false, // due to WordPress templating.
         'nullable_type_declaration_for_default_null_value' => true,
         'class_definition'                                 => [
@@ -128,8 +144,8 @@ class Config extends BaseConfig
             'import_constants' => true,
             'import_functions' => true,
         ],
-        'heredoc_indentation' => true,
-        'heredoc_to_nowdoc' => true,
+        'heredoc_indentation'                    => true,
+        'heredoc_to_nowdoc'                      => true,
         'method_chaining_indentation'            => true,
         'multiline_comment_opening_closing'      => true,
         'multiline_whitespace_before_semicolons' => [
@@ -170,10 +186,10 @@ class Config extends BaseConfig
         'phpdoc_order_by_value'               => true,
         'phpdoc_to_comment'                   => false,
         'phpdoc_var_annotation_correct_order' => true,
-        'protected_to_private' => true,
+        'protected_to_private'                => true,
         'return_assignment'                   => true,
-        'self_static_accessor' => true,
-        'no_trailing_comma_in_singleline' => [
+        'self_static_accessor'                => true,
+        'no_trailing_comma_in_singleline'     => [
             'elements' => [
                 'arguments',
                 'array_destructuring',
@@ -183,7 +199,7 @@ class Config extends BaseConfig
         ],
         'trailing_comma_in_multiline' => [
             'after_heredoc' => true,
-            'elements' => [
+            'elements'      => [
                 'arrays',
                 'arguments',
             ],
@@ -197,18 +213,18 @@ class Config extends BaseConfig
      */
     private const PHP_VERSION_SPECIFIC_RULES = [
         80000 => [
-            '@PHP80Migration' => true,
+            '@PHP80Migration'       => true,
             '@PHP80Migration:risky' => true,
         ],
         80100 => [
-            '@PHP81Migration' => true,
+            '@PHP81Migration'            => true,
             'no_superfluous_phpdoc_tags' => [
                 'remove_inheritdoc' => true,
-                'allow_mixed' => false,
+                'allow_mixed'       => false,
             ],
             'trailing_comma_in_multiline' => [
                 'after_heredoc' => true,
-                'elements' => [
+                'elements'      => [
                     'arrays',
                     'arguments',
                     'parameters',
@@ -227,14 +243,14 @@ class Config extends BaseConfig
         $phpSpecificRules = array_filter(
             self::PHP_VERSION_SPECIFIC_RULES,
             static fn (array $rules, int $requiredPhpVersion): bool => $requiredPhpVersion <= $phpMinVersion,
-            \ARRAY_FILTER_USE_BOTH,
+            ARRAY_FILTER_USE_BOTH,
         );
 
         $headerRule = null === $headerComment
             ? []
             : [
                 'header_comment' => [
-                    'header' => $headerComment,
+                    'header'   => $headerComment,
                     'location' => 'after_open',
                 ],
             ];
