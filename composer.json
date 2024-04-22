@@ -19,12 +19,12 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "Socialbrothers\\PhpCsFixer\\": "src/"
+            "SocialBrothers\\PhpCsFixer\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Socialbrothers\\PhpCsFixer\\": "tests/"
+            "SocialBrothers\\PhpCsFixer\\": "tests/"
         }
     },
     "config": {
@@ -37,5 +37,10 @@
             "indent-size": 4,
             "indent-style": "space"
         }
+    },
+    "scripts": {
+        "php-cs-fixer": "vendor/bin/php-cs-fixer",
+        "fix": "@php-cs-fixer fix --config=.php-cs-fixer.dist.php",
+        "lint": "@php-cs-fixer fix --dry-run --diff --diff-format=udiff --config=.php-cs-fixer.dist.php"
     }
 }
