@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use SocialBrothers\PhpCsFixer\Config;
 use PhpCsFixer\Finder;
+use SocialBrothers\PhpCsFixer\Config;
 
 /**
  * Cache dir and file location.
@@ -18,6 +18,14 @@ if (!file_exists($cacheDirectory) && !mkdir($cacheDirectory, 0700, true) && !is_
     throw new RuntimeException(sprintf('Directory "%s" was not created', $cacheDirectory));
 }
 
+$finder = Finder::create()
+    ->in(__DIR__)
+    ->exclude([
+        'tests/Fixtures',
+        'vendor',
+    ])
+    ->ignoreDotFiles(false);
+
 return (new Config(
     Config::PHP_74,
     <<<'EOF'
@@ -27,15 +35,7 @@ return (new Config(
 
         For the full copyright and license information, please view the LICENSE
         file that was distributed with this source code.
-    EOF,
+        EOF,
 ))
-    ->setFinder(
-        Finder::create()
-            ->in(__DIR__)
-            ->exclude([
-                'tests/Fixtures',
-                'vendor',
-            ])
-            ->ignoreDotFiles(false)
-    )
+    ->setFinder($finder)
     ->setCacheFile($cacheFile);
