@@ -50,8 +50,8 @@ class Config extends BaseConfig
         '@PHP74Migration'       => true,
         '@PHP74Migration:risky' => true,
 
-        '@PER'       => true,
-        '@PER:risky' => true,
+        '@PER-CS'       => true,
+        '@PER-CS:risky' => true,
 
         '@PSR1'        => true,
         '@PSR12'       => true,
@@ -103,8 +103,7 @@ class Config extends BaseConfig
         'concat_space'               => [
             'spacing' => 'one',
         ],
-        'no_trailing_comma_in_singleline_array' => true,
-        'array_syntax'                          => [
+        'array_syntax' => [
             'syntax' => 'short',
         ],
         'align_multiline_comment' => true,
@@ -136,7 +135,7 @@ class Config extends BaseConfig
             ],
         ],
         'doctrine_annotation_spaces'  => true,
-        'escape_implicit_backslashes' => true,
+        'string_implicit_backslashes' => true,
         'explicit_indirect_variable'  => true,
         'explicit_string_variable'    => true,
         'global_namespace_import'     => [
@@ -173,7 +172,6 @@ class Config extends BaseConfig
         ],
         'no_null_property_initialization' => true,
         'no_superfluous_elseif'           => true,
-        'no_trailing_comma_in_list_call'  => true,
         'no_useless_else'                 => true,
         'no_useless_return'               => true,
         'operator_linebreak'              => [
