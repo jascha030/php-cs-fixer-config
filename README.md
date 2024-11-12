@@ -5,12 +5,12 @@ WP Back-end default configurations for php-cs-fixer.
 ## Installation
 
 ```bash
-composer require --dev socialbrothers/php-cs-fixer-config
+composer require --dev jascha030/php-cs-fixer-config
 ```
 
 ## Usage
 
-The `SocialBrothers/PhpCsFixer/Config` class extends `PhpCsFixer\Config` class
+The `Jascha030\PhpCsFixer\Config` class extends `PhpCsFixer\Config` class
 and automatically sets our default php-cs-fixer ruleset.
 It allows you to set the language version and header comment in a more readable way.
 
@@ -18,7 +18,7 @@ This means any other method from the `PhpCsFixer\Config` class can be used as we
 
 ### Language Version
 
-The `SocialBrothers/PhpCsFixer/Config` class contains constants for the available
+The `Jascha030\PhpCsFixer\Config` class contains constants for the available
 PHP language versions.
 
 ```php
@@ -36,9 +36,9 @@ PHP language versions.
 ```php
 <?php declare(strict_types=1);
 
-use SocialBrothers\PhpCsFixer\Config;
+use Jascha030\PhpCsFixer\Config;
 use PhpCsFixer\Finder;
-use SocialBrothers\PhpCsFixer\Enum\LanguageVersion;
+use Jascha030\PhpCsFixer\Enum\LanguageVersion;
 
 // Use the default PHP-cs-fixer Finder as you would normally do.
 $finder = Finder::create()
@@ -47,14 +47,14 @@ $finder = Finder::create()
     ->ignoreDotFiles(false);
 
 $config = new Config(
-    Config::PHP_74, // Set a minimal PHP Language version (8.2 is the default value).
+    Config::PHP_82, // Set a minimal PHP Language version (8.2 is the default value).
     <<<'EOF'
-        This file is part of the WP Brothers WordPress Back-end PHP-CS-Fixer Config package.
+     This file is part of the jascha030/php-cs-fixer-config package.
 
-        (c) WP Brothers <wordpress@socialbrothers.nl>
+     (c) Jascha van Aalst <contact@jaschavanaalst.nl>
 
-        For the full copyright and license information, please view the LICENSE
-        file that was distributed with this source code.
+     For the full copyright and license information, please view the LICENSE
+     file that was distributed with this source code.
     EOF, // Add optional header comment, if needed for the license. (In most cases we won't need this and the argument can be omitted).
 );
 

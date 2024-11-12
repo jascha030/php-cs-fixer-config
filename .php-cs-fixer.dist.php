@@ -1,9 +1,9 @@
 <?php
 
 /*
- * This file is part of the WP Brothers WordPress Back-end PHP-CS-Fixer Config package.
+ * This file is part of the jascha030/php-cs-fixer-config package.
  *
- * (c) WP Brothers <wordpress@socialbrothers.nl>
+ * (c) Jascha van Aalst <contact@jaschavanaalst.nl>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -12,7 +12,7 @@
 declare(strict_types=1);
 
 use PhpCsFixer\Finder;
-use SocialBrothers\PhpCsFixer\Config;
+use Jascha030\PhpCsFixer\Config;
 
 /**
  * Cache dir and file location.
@@ -38,9 +38,9 @@ $finder = Finder::create()
 return (new Config(
     Config::PHP_74,
     <<<'EOF'
-        This file is part of the WP Brothers WordPress Back-end PHP-CS-Fixer Config package.
+        This file is part of the Jascha van Aalst WordPress Back-end PHP-CS-Fixer Config package.
 
-        (c) WP Brothers <wordpress@socialbrothers.nl>
+        (c) Jascha van Aalst <contact@jaschavanaalst.nl>
 
         For the full copyright and license information, please view the LICENSE
         file that was distributed with this source code.

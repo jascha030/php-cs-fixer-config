@@ -1,9 +1,9 @@
 <?php
 
 /*
- * This file is part of the WP Brothers WordPress Back-end PHP-CS-Fixer Config package.
+ * This file is part of the Jascha van Aalst WordPress Back-end PHP-CS-Fixer Config package.
  *
- * (c) WP Brothers <wordpress@socialbrothers.nl>
+ * (c) Jascha van Aalst <contact@jaschavanaalst.nl>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace SocialBrothers\PhpCsFixer;
+namespace Jascha030\PhpCsFixer;
 
 use PhpCsFixer\Config as BaseConfig;
 

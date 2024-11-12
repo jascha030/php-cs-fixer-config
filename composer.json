@@ -1,6 +1,6 @@
 {
-    "name": "socialbrothers/php-cs-fixer-config",
-    "description": "WP Backend default configuration for php-cs-fixer.",
+    "name": "jascha030/php-cs-fixer-config",
+    "description": "Personal default configurations for php-cs-fixer.",
     "license": "MIT",
     "authors": [
         {
@@ -19,12 +19,12 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "SocialBrothers\\PhpCsFixer\\": "src/"
+            "Jascha030\\PhpCsFixer\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SocialBrothers\\PhpCsFixer\\": "tests/"
+            "Jascha030\\PhpCsFixer\\": "tests/"
         }
     },
     "config": {
