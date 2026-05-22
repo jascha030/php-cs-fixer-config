@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the jascha030/php-cs-fixer-config package.
+ * This file is part of the Jascha van Aalst WordPress Back-end PHP-CS-Fixer Config package.
  *
  * (c) Jascha van Aalst <contact@jaschavanaalst.nl>
  *
@@ -11,8 +11,8 @@
 
 declare(strict_types=1);
 
-use PhpCsFixer\Finder;
 use Jascha030\PhpCsFixer\Config;
+use PhpCsFixer\Finder;
 
 /**
  * Cache dir and file location.
