@@ -29,12 +29,18 @@ class Config extends BaseConfig
 
     public const PHP_83 = 80300;
 
+    public const PHP_84 = 80400;
+
+    public const PHP_85 = 80500;
+
     public const SUPPORTED_VERSIONS = [
         self::PHP_74,
         self::PHP_80,
         self::PHP_81,
         self::PHP_82,
         self::PHP_83,
+        self::PHP_84,
+        self::PHP_85,
     ];
 
     /**
@@ -232,6 +238,15 @@ class Config extends BaseConfig
         ],
         80200 => ['@PHP82Migration' => true],
         80300 => ['@PHP83Migration' => true],
+        80400 => [
+            '@PHP84Migration'                                  => true,
+            'new_expression_parentheses'                       => true,
+            'nullable_type_declaration_for_default_null_value' => true,
+        ],
+        80500 => [
+            '@PHP85Migration'                => true,
+            'switch_case_semicolon_to_colon' => true,
+        ],
     ];
 
     public function __construct(int $phpMinVersion = 80200, ?string $headerComment = null)
